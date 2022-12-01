@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text"value="TCS" id="txt1"><br/><br>
+   <input type="text" value="WIPRO" id="txt2"><br/>
+    <button onclick="swap()">Start Swap</button>
+    <script>
+         let demo=()=>{
+            var t1=document.querySelector("#txt1")
+            var t2=document.querySelector("#txt2")
+            var val1=t1.value
+            var val2=t2.value
+            t1.value=val2
+            t2.value=val1
+            t1.style.background="blue"
+            t2.style.background="navy"
+            t1.style.color="white"
+            t2.style.color="white"
+         }
+        let swap=()=>{
+            setInterval(demo,1000)
+         }
+    </script>
+</body>
+</html>

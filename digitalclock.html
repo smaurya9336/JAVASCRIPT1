@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+        body{
+            background: black;
+        }
+        #box{
+            height: 300px;
+            width: 900px;
+            margin: 50px auto;
+        }
+        .a{
+            height: 250px;
+            width: 250px;
+            float: left;
+            background: white;
+            margin: 25px;
+            border: 50px groove red;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 10px black inset;
+            font-size: 80px;
+            text-align: center;
+            line-height: 150px;
+            color: red;
+            font-family: impact;
+        }
+        h1{
+            color:red;
+            text-align: center;
+             font-size: 30px;
+        }
+    </style>
+</head>
+<body> <h1>DIGITAL CLOCK</h1>
+    
+    <div id="box"> 
+        <div id="h" class="a">HH</div>
+        <div id="m" class="a">MM</div>
+        <div id="s" class="a">SS</div>
+    </div>
+    <script>
+    function dclock(){
+        var d=new Date()
+        var hh=document.querySelector("#h")
+        var mm=document.querySelector("#m")
+        var ss=document.querySelector("#s")
+        hh.innerText=d.getHours()
+        mm.innerText=d.getMinutes()
+        ss.innerText=d.getSeconds()
+    }
+     setInterval(dclock,1000)
+    </script>
+</body>
+</html>

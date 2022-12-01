@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter first number: <input type="text" id="txt1"/><br/><br>
+    Enter second number: <input type="text" id="txt2"/><br/><br>
+    <p id="msg"></p>
+    <button onclick="add()">ADD</button>
+    <script>
+        // function add()
+        var add=()=>
+        {
+            var msg=document.getElementById("msg")
+            var num1=document.getElementById("txt1").value
+            var num2=document.getElementById("txt2").value
+           var res=parseFloat(num1)+parseFloat(num2)
+            // document.write("Result is:" +res)
+            msg.innerText="Result is: "+res
+            msg.style.color="blue"
+            msg.style.fontSize="40px"
+
+            
+        }
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML</h1>
+    <h1>CSS</h1>
+    <h1>PYTHON</h1>
+    <H1>PHP</H1>
+    <H1>JQUERY</H1>
+<button onclick="demo()">Click Me</button>
+<script>
+    let demo=()=>{
+        var arr=document.getElementsByTagName("h1")
+        alert(arr.length)
+        for(i=0;i<arr.length;i++){
+            alert(arr[i].innerText)
+        }
+    }
+</script>
+</body>
+</html>

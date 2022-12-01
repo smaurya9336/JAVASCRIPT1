@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 400px;
+            width: 400px;
+            border: 10px groove black;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+    </style>
+    <script>
+        var arr=["cns.jpeg","s1.jpeg","arti.jpeg","harsh.jpeg","1.jpeg","s2.jpeg"]
+        var clr=["blue","green","pink","yellow","skyblue","maroon"]
+        var i=0;
+        function slider(){
+            var im=document.querySelector("img")
+            im.src="images/"+arr[i]
+            im.style.background=clr[i];
+            i++;
+            if(i==arr.length){
+                i=0
+            }
+            
+            
+        }
+        window.setInterval(slider,1000)
+    </script>
+</head>
+<body onload="slider()">
+    <center>
+    <h1>IMAGE CHANGER</h1><hr/>
+    <img src="images/s1.jpeg">
+</center>
+</body>
+</html>

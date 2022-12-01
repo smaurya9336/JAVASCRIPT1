@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            border: 10px solid red;
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+        }
+    </style>
+    <script>
+        let demo=()=>{
+        // document.querySelector("img").setAttribute("src","images/harsh.jpeg")
+        //var path=document.querySelector("img").getAttribute("src");
+       // alert(path)
+       //document.querySelector("img").removeAttribute("class")
+       let y=document.querySelector("img").hasAttribute("class")
+       alert(y)
+        }
+    </script>
+</head>
+<body>
+    <img  onclick="demo()" src="images/s1.jpeg" class="a">
+</body>
+</html>

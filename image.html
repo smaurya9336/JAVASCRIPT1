@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height:200px ;
+            width: 200px;
+            border: 10px groove black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/harsh.jpeg" id="im1"/>
+    <img src="images/s1.jpeg" id="im2"/><br/>
+    <button onclick="demo()">Swap Image</button>
+    <script>
+        var demo=()=>{
+            var img1=document.getElementById("im1")
+            var img2=document.getElementById("im2")
+            var path1= img1.src;
+            var path2= img2.src;
+            img1.src=path2;
+            img2.src=path1;
+        }
+        setInterval(demo,2000)
+    </script>
+</body>
+</html>
