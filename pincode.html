@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input onkeyup="demo(this)" type="number">
+    <b>Message</b><BR><BR><BR>
+    <button>SAVE</button>
+    <script>
+        function demo(x){
+            var btn=document.querySelector("button")
+            var msg=document.querySelector("b")
+            if(x.value.length==6){
+                msg.innerText="VALID PINCODE"
+                msg.style.color="green"
+                x.style.border="4px solid green"
+                btn.style.display="block"
+                
+
+            }
+            else{
+                msg.innerText="Invalid Pincode"
+                msg.style.color="red"
+                x.style.border="4px solid red"
+                btn.style.display="none"
+            }
+      
+        }
+    </script>
+</body>
+</html>

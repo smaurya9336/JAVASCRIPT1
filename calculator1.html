@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Enter first number<br/><input type="text" id="txt1"><br/> 
+   Enter second number<br/><input type="text"  id="txt2"><br/> 
+   <p>Result</p>
+   <input type="button" value="+" onclick="demo(this)">
+   <input type="button" value="-" onclick="demo(this)">
+   <input type="button" value="*" onclick="demo(this)">
+   <input type="button" value="/" onclick="demo(this)">
+   <script>
+    function demo(x){
+        var num1=Number(document.querySelector("#txt1").value)
+        var num2=Number(document.querySelector("#txt2").value)
+        res=""
+        if(x.value=="+"){
+            res=num1+num2
+
+        }
+        else if(x.value=="-"){
+            res=num1-num2
+        }
+        else if(x.value=="*"){
+            res=num1*num2
+        }
+        else if(x.value=="/"){
+            res=num1/num2
+        }
+        else{
+            document.querySelector("p").innerHTML="please enter valid button"
+            
+        }
+document.querySelector("p").innerHTML="<b>Result is:"+res+"</b>"
+    }
+   </script>
+</body>
+</html>
