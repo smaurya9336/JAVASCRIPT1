@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#box{
+    min-height: 400px;
+    width: 300px;
+    border: 5px groove grey;
+    border-radius: 5px;
+    padding: 25px;
+    background: green;
+    margin: 100px auto;
+}
+p{
+    height: 100px;
+    border: 5px double aqua;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    
+}
+    </style>
+</head>
+<body onload="randomColor()">
+    <div id="box">
+    <p>#bac3Fa</p>
+    <button onclick="setColor()">SET COLOR</button>
+</div>
+<script>
+    function randomColor(){
+        var str="fa12c3d04b567e89"
+        var color="#"
+        var color1="#"
+        for(var i=0;i<=5;i++){
+            var rIndex=Math.floor(Math.random()*16)
+            var rIndex1=Math.floor(Math.random()*16)
+            color=color+str[rIndex] 
+            color1=color1+str[rIndex1]  
+        }
+        var p=document.querySelector("p")
+        p.style.background=color;
+        p.innerText=color;
+        p.style.border="10px groove"+color1;
+
+    }
+setInterval(randomColor,1000)
+function setColor(){
+   var color=document.querySelector("p").innerText
+   document.querySelector("#box").style.background=color;
+}
+</script>
+</body>
+</html>
